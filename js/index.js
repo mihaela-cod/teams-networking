@@ -1,8 +1,14 @@
 function displayTeams(teams) {
-  console.warn("display", teams);
+  // var teansHTML = "";
+  // for (var i = 0; i < teams.length; i++) {
+  //   teamsHTML += "<tr><td>TODU</td></tr>";
+  // }
+
+  // transforma in HTML
+  // console.warn("display", teams);
   var teamsHTML = "";
   teams.forEach(function (team) {
-    console.info(team.promotion);
+    // console.info(team.promotion);
     teamsHTML += `
       <tr>
         <td>${team.promotion}</td>
@@ -14,8 +20,8 @@ function displayTeams(teams) {
         <td>x e</td>
       </tr>`;
   });
-  console.warn(teamsHTML);
 
+  // afisare
   document.querySelector("table tbody").innerHTML = teamsHTML;
 }
 
