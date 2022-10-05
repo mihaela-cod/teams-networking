@@ -4,7 +4,7 @@ function displayTeams(teams) {
   //   teamsHTML += "<tr><td>TODU</td></tr>";
   // }
 
-  // transforma echipele din json in HTML
+  // transforma in HTML
   // console.warn("display", teams);
   var teamsHTML = "";
   teams.forEach(function (team) {
@@ -17,7 +17,10 @@ function displayTeams(teams) {
         <td>
           <a href="${team.url}">open</a>
         </td>
-        <td>x e</td>
+        <td>
+          <button class="btn-update" >Update</button>
+          <button class="btn-delete" >Delete</button>
+        </td>
       </tr>`;
   });
 

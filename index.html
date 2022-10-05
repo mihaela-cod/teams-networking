@@ -4,31 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Networking</title>
+    <title>Address Book</title>
+    <link rel="icon" href="images/logo-favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Group</th>
-          <th>Members</th>
-          <th>Project Name</th>
-          <th>Project URL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>won8</td>
-          <td>noi</td>
-          <td>CV</td>
-          <td>
-            <a href="https://github.com/mihaela-cod">mihaela-cod</a>
-          </td>
-          <td>x e</td>
-        </tr>
-        <script src="js/index.js"></script>
-      </tbody>
-    </table>
+    <header>
+      <div class="header">
+        <div class="text-white">
+          <h1>Teams Networking</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="main">
+      <div class="meniu">
+        <div class="meniu-left">
+          <button class="btn-add hide-print" onclick="openForm()">
+            <strong>+ Add Contact</strong>
+          </button>
+        </div>
+        <div class="meniu-right">
+          <input
+            type="search"
+            id="search"
+            placeholder="Search"
+            class="search hide-print"
+            oninput="search()"
+          />
+        </div>
+      </div>
+      <div style="overflow-x: auto">
+        <table>
+          <colgroup>
+            <col span="1" style="width: 40px" />
+            <col span="1" style="width: 150px" />
+            <col span="1" style="width: 250px" />
+            <col span="1" style="width: 200px" />
+            <col span="1" style="width: 80px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Members</th>
+              <th>Project Name</th>
+              <th>Project URL</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>won8</td>
+              <td>noi</td>
+              <td>CV</td>
+              <td>
+                <a href="https://github.com/mihaela-cod">mihaela-cod</a>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <strong>Web Developer Course - FastTruckIT</strong> <br />
+        <strong>Trainer:</strong> Matei Nicolae<br /><br />
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
