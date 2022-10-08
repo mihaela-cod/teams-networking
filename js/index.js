@@ -23,10 +23,15 @@ function displayTeams(teams) {
   // transforma in HTML
   // console.warn("display", teams);
   var teamsHTML = "";
-  teams.forEach(function (team) {
-    // console.info(team.promotion);
-    teamsHTML += getTeamHTML(team);
+  // teams.forEach(function (team) {
+  // console.info(team.promotion);
+  //  teamsHTML += getTeamHTML(team);
+  // });
+
+  var r = teams.map(function (team) {
+    console.info(team);
   });
+  console.warn("r", r);
 
   // afisare
   document.querySelector("table tbody").innerHTML = teamsHTML;
