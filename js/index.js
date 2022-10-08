@@ -22,19 +22,20 @@ function displayTeams(teams) {
 
   // transforma in HTML
   // console.warn("display", teams);
-  var teamsHTML = "";
+  // var teamsHTML = "";
   // teams.forEach(function (team) {
   // console.info(team.promotion);
   //  teamsHTML += getTeamHTML(team);
   // });
 
-  var r = teams.map(function (team) {
+  var teamsHTML = teams.map(function (team) {
     console.info(team);
+    return getTeamHTML(team);
   });
-  console.warn("r", r);
+  console.warn("teamsHTML", teamsHTML);
 
   // afisare
-  document.querySelector("table tbody").innerHTML = teamsHTML;
+  document.querySelector("table tbody").innerHTML = teamsHTML.join("");
 }
 
 function loadTeams() {
