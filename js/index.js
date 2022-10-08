@@ -15,24 +15,7 @@ function getTeamHTML(team) {
 }
 
 function displayTeams(teams) {
-  // var teamsHTML = "";
-  // for (var i = 0; i < teams.length; i++) {
-  //   teamsHTML += getTeamHTML(teams[i]);
-  // }
-
-  // transforma in HTML
-  // console.warn("display", teams);
-  // var teamsHTML = "";
-  // teams.forEach(function (team) {
-  // console.info(team.promotion);
-  //  teamsHTML += getTeamHTML(team);
-  // });
-
-  var teamsHTML = teams.map(function (team) {
-    console.info(team);
-    return getTeamHTML(team);
-  });
-  console.warn("teamsHTML", teamsHTML);
+  var teamsHTML = teams.map(getTeamHTML);
 
   // afisare
   document.querySelector("table tbody").innerHTML = teamsHTML.join("");
